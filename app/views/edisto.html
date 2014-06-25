@@ -1,0 +1,52 @@
+<!doctype html>
+<div class="header">
+   
+    <span style="position: absolute; top:5px; right:15px;">
+      <br>
+        
+
+      </br>
+    <ul class="nav nav-pills pull-right">
+      <li class=""><a ng-href="#/main">HOME</a></li>
+    <li><a ng-href="#/historicalsites">HISTORY</a></li>
+    <!-- <li><a ng-href="#/beaches">BEACHES</a></li> -->
+    <li><a ng-href="#/lowcountryislands">LOW COUNTRY ISLANDS</a></li>
+    <!-- <li><a ng-href="#/localshangout">FEELIN' LOCAL</a></li> -->
+    <li><a ng-href="#">HEAVEN ON EARTH</a></li>
+    <li><a ng-href="#/blog">LOCALS TALK</a></li>
+    </ul>
+</div>
+
+
+
+
+<body>
+<div class="container">
+  <div class="well" ng-repeat="feed in feeds | orderBy:'title'" ng-animate="'animate'">
+    <h2>{{feed.title}}</h2>
+    <p>
+      <span ng-repeat="item in feed.entries" ng-animate ="'animate'">
+        <a class="h4" href="{{item.link}}" target="_blank">{{}}</a>
+        </br>
+        <span ng-bind-html="item.contentSnippet"></span>
+        <br/><br/>
+      </span>
+    </p>
+  </div>
+<div>
+  <h1>THE BEACH HOUSE</h1>
+  <p class="lead">
+    <img src="images/edistosunset.jpg" alt="Charleston"><br>
+    THE EDISTO LIFE
+  </p>
+  <p><a class="btn btn-lg btn-default" ng-href="#">Explore Edisto</a></p>
+</div>
+
+
+
+</body>
+</html>
+
+<div class="footer">
+  <p><a href="http://kat5sc.com"><span class="glyphicon glyphicon-eye-open"></span> THEKACKIEPROJECT</a></p>
+</div>
